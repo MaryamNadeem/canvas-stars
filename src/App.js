@@ -30,6 +30,13 @@ export default function App() {
         particlesArray.push(new Particle());
       }
     });
+    canvas.addEventListener('touchmove', e => {
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+      for (let i = 0; i < 10; i++) {
+        particlesArray.push(new Particle());
+      }
+    });
     animate();
     // init();
     console.log(particlesArray);
